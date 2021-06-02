@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/c5737b68a5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Orinoco</title>
+    <meta name="descritpion" />
+  </head>
+
+  <body>
+    <div class="container-fluid bg-dark">
+      <header class="container site-header sticky-top py-1">
+        <nav class="d-flex flex-row justify-content-between navbar-dark">
+          <a
+            class="py-2 navbar-brand nav-items"
+            href="index.html"
+            aria-label="Product"
+          >
+            <img src="" alt="" />
+            Orinoco
+          </a>
+          <a class="py-2 unstyled nav-items" href="">
+            <i class="fas fa-shopping-cart"></i>
+            Panier
+          </a>
+        </nav>
+      </header>
+    </div>
+
+    <main class="container d-flex flex-column">
+
+      <template id="template" class="mt-5 d-flex flex-column productPanier">
+        <div id="toRemove" class="mb-4 row">
+          <div class="col-10 row">
+            <img id="img" src="" alt="" class="border-start border-end img col-2">
+            <div id="title" class="border-end col-4 name">Name</div>
+            <div id="lense" class="border-end col-4 lense">Lense</div>
+            <div id="price" class="col-2 price">Price</div>
+          </div>
+          <div class="col-1 row align-self-baseline ">
+            <button id="remove" class="remove align-self-center btn btn-secondary col-3 p-1">-</button>
+            <div id="inCart" class="align-self-center col-6">10</div>
+            <button id="more" class="more align-self-center btn btn-secondary col-3 p-1">+</button>
+          </div>
+          <div id="totale-item" class="col-1">30 00€</div>
+
+        </div>
+      </template>
+      
+      <!-- Produit dans le panier -->
+      <div id="productContainer" class="">
+      </div>
+      <!-- Total Panier -->
+      <div id="totalCounter" class="">
+        <div class="mb-2 row">
+          <div class="col-10 row">
+            <div class="col-10 border-end text-end">Totale des articles</div>
+            <div id="total" class="col-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div id="formulaireContainer" class="formulaire-container container mt-5 mb-3 border-top border-bottom">
+        <form class="formulaire row col-10 p-2 " action="">
+          <div class="mb-3 col-6">
+            <label for="firstName" class="form-label">Prénom</label>
+            <input type="text" class="form-control" name="firstName" id="firstName" required>
+          </div>
+          <div class="mb-3 col-6" >
+            <label for="lastName" class="form-label">Nom</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" required>
+          </div>
+          <div class="mb-3 col-8">
+            <label for="address" class="form-label">Adresse</label>
+            <input type="text" class="form-control" name="address" id="address" required>
+          </div>
+          <div class="mb-3 col-4">
+            <label for="city" class="form-label">Ville</label>
+            <input type="text" class="form-control" name="city" id="city" required>
+          </div>
+          <div class="mb-3 col-7">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" name="email" id="email" required>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Boutton Commande -->
+      <div class="container p-0 row" >
+        <div class="col-7"></div>
+        <a href="#commandButton" id="commandButton" class="mb-5 col-5 btn btn-secondary align-end">Commander</a>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Conditions générales</span>
+      </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./java/panier.js"></script>
+  </body>
+</html>
