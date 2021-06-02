@@ -41,28 +41,54 @@
     </div>
 
     <main class="container d-flex flex-column">
-
       <template id="template" class="mt-5 d-flex flex-column productPanier">
         <div id="toRemove" class="mb-4 row">
           <div class="col-10 row">
-            <img id="img" src="" alt="" class="border-start border-end img col-2">
+            <img
+              id="img"
+              src=""
+              alt=""
+              class="border-start border-end img col-2"
+            />
             <div id="title" class="border-end col-4 name">Name</div>
             <div id="lense" class="border-end col-4 lense">Lense</div>
             <div id="price" class="col-2 price">Price</div>
           </div>
-          <div class="col-1 row align-self-baseline ">
-            <button id="remove" class="remove align-self-center btn btn-secondary col-3 p-1">-</button>
+          <div class="col-1 row align-self-baseline">
+            <button
+              id="remove"
+              class="
+                remove
+                btn-setItem
+                align-self-center
+                btn btn-secondary
+                col-3
+                p-1
+              "
+            >
+              -
+            </button>
             <div id="inCart" class="align-self-center col-6">10</div>
-            <button id="more" class="more align-self-center btn btn-secondary col-3 p-1">+</button>
+            <button
+              id="more"
+              class="
+                more
+                btn-setItem
+                align-self-center
+                btn btn-secondary
+                col-3
+                p-1
+              "
+            >
+              +
+            </button>
           </div>
           <div id="totale-item" class="col-1">30 00€</div>
-
         </div>
       </template>
-      
+
       <!-- Produit dans le panier -->
-      <div id="productContainer" class="">
-      </div>
+      <div id="productContainer" class=""></div>
       <!-- Total Panier -->
       <div id="totalCounter" class="">
         <div class="mb-2 row">
@@ -74,36 +100,60 @@
       </div>
 
       <!-- Formulaire -->
-      <div id="formulaireContainer" class="formulaire-container container mt-5 mb-3 border-top border-bottom">
-        <form class="formulaire row col-10 p-2 " action="">
+      <div
+        id="formulaireContainer"
+        class="
+          formulaire-container
+          container
+          mt-5
+          mb-3
+          border-top border-bottom
+        "
+      >
+        <form
+          id="userDataForm"
+          class="formulaire row col-10 p-2"
+          action=""
+          method="POST"
+        >
           <div class="mb-3 col-6">
             <label for="firstName" class="form-label">Prénom</label>
-            <input type="text" class="form-control" name="firstName" id="firstName" required>
+            <input type="text" class="form-control" name="firstName" required />
+            <small></small>
           </div>
-          <div class="mb-3 col-6" >
+          <div class="mb-3 col-6">
             <label for="lastName" class="form-label">Nom</label>
-            <input type="text" class="form-control" name="lastName" id="lastName" required>
+            <input type="text" class="form-control" name="lastName" required />
+            <small></small>
           </div>
           <div class="mb-3 col-8">
             <label for="address" class="form-label">Adresse</label>
-            <input type="text" class="form-control" name="address" id="address" required>
+            <input type="text" class="form-control" name="address" required />
+            <small></small>
           </div>
           <div class="mb-3 col-4">
             <label for="city" class="form-label">Ville</label>
-            <input type="text" class="form-control" name="city" id="city" required>
+            <input type="text" class="form-control" name="city" required />
+            <small></small>
           </div>
           <div class="mb-3 col-7">
             <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" name="email" id="email" required>
+            <input type="email" class="form-control" name="email" required />
+            <small></small>
           </div>
-
         </form>
       </div>
 
       <!-- Boutton Commande -->
-      <div class="container p-0 row" >
+      <div class="container p-0 row">
         <div class="col-7"></div>
-        <a href="#commandButton" id="commandButton" class="mb-5 col-5 btn btn-secondary align-end">Commander</a>
+        <a
+          href="#btn-commandItem"
+          id="btn-commandItem"
+          class="mb-5 col-5 btn btn-secondary align-end"
+        >
+          Commander
+        </a>
       </div>
     </main>
 

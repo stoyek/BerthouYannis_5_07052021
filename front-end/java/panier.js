@@ -2,10 +2,8 @@ main()
 
 function main() {
   let itemOfPanier = JSON.parse(localStorage.getItem("Panier"))
-  console.log(itemOfPanier)
 
   displayProduct(itemOfPanier)
-  calculTotal(itemOfPanier)
   btnToChangePrice(itemOfPanier)
   commande();
 
@@ -26,6 +24,7 @@ function displayProduct(data) {
     document.getElementById("more").id = i
     document.getElementById("remove").id = i
   }
+  calculTotal(data);
 }
 
 function calculTotal(product) {
@@ -38,8 +37,7 @@ function calculTotal(product) {
 }
 
 function btnToChangePrice(inCart) {
-  let btn = [...document.querySelectorAll(".btn")]
-  console.log(btn)
+  let btn = [...document.querySelectorAll(".btn-setItem")]
   btn.forEach((e) => {
     e.onclick = () => {
       let element = document.getElementById("productContainer")
@@ -47,7 +45,6 @@ function btnToChangePrice(inCart) {
       if (e.classList[0] === "more") {
         inCart[e.id].inCart++
       } else {
-        console.log(inCart[e.id].inCart)
         if (inCart[e.id].inCart > 1) {
           inCart[e.id].inCart--
         } else {
@@ -59,15 +56,48 @@ function btnToChangePrice(inCart) {
         element.removeChild(element.firstChild)
       }
       displayProduct(inCart)
-      calculTotal(inCart)
       btnToChangePrice(inCart)
     }
   })
 }
 
 function commande(){
-    document.getElementById('commandButton')
+    document.getElementById('btn-commandItem')
     .addEventListener('click', ()=>{
-        document.getElementById('formulaireContainer').style.display = 'block'
+      let formContain = document.getElementById('formulaireContainer')
+      
+      if(formContain.style.display != 'block'){
+        formContain.style.display = 'block'
+        formValidate();
+      }
+      else{
+        formValidate();
+      }
     })
+}
+
+function formValidate(){
+  const form = document.querySelector('#userDataForm')
+
+  form.email.addEventListener('change', ()=>{
+    validate(form.email);
+  })
+
+  function validate(input){
+    let firstName = new RegExp(/[0-9]/)
+    let lastName = new RegExp(/[0-9]/)
+    let address = new RegExp(/[0-9]/)
+    let city = new RegExp(/[0-9]/)
+    let email = new RegExp(/[0-9]/)
+
+    switch (key) {
+      case value:
+        
+        break;
+    
+      default:
+        break;
+    }
+    console.log(testEmail.test(input.value));
+  }
 }
