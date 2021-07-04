@@ -24,15 +24,11 @@
     <div class="container-fluid bg-dark">
       <header class="container site-header sticky-top py-1">
         <nav class="d-flex flex-row justify-content-between navbar-dark">
-          <a
-            class="py-2 navbar-brand nav-items"
-            href="index.html"
-            aria-label="Product"
-          >
+          <a class="py-2 navbar-brand nav-items" href="./index.html" aria-label="Product">
             <img src="" alt="" />
             Orinoco
           </a>
-          <a class="py-2 unstyled nav-items" href="panier.html">
+          <a class="py-2 unstyled nav-items" href="./panier.html">
             <i class="fas fa-shopping-cart"></i>
             Panier
           </a>
@@ -40,18 +36,20 @@
       </header>
     </div>
 
-    <main class="container"></main>
+      <main class="container col-8">
+        <div class="align-self-center text-center">
+            <h1>Votre commande à bien été validée</h1>
+            <h2>Merci pour votre commande n°</h2>
+            <h3 id="numberCommande"></h3>
+        </div>
+      </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
-      <div class="container">
-        <span class="text-muted">Conditions générales</span>
-      </div>
-    </footer>
-    <!-- JavaScript Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-      crossorigin="anonymous"
-    ></script>
+      <footer class="footer fixed-bottom mt-auto py-3 bg-dark">
+        <div class="container">
+          <span class="text-muted">Conditions générales</span>
+        </div>
+      </footer>
+
+    <script src="./java/commande.js"></script>
   </body>
 </html>

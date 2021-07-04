@@ -26,6 +26,10 @@ a{
     padding:30px;
 }
 
+#btn-displayForm{
+    display: block;
+}
+
 .remove{
     display: block;
 }
@@ -42,9 +46,40 @@ a{
 @keyframes slide {
     from{
         transform: translateY(-250px);
-
+        
     }
     to{
         transform: translateY(0px);
     }
+}
+
+
+/* Visual Modif */
+small{
+    color: red;
+}
+
+.btn-custom{
+    background: linear-gradient(-10deg, #8f5bfe, #8f5bfe, #9171cf, #e68a08);
+    transition: .3s;
+}
+.btn-cutom:hover{
+    color: black;
+    background: linear-gradient(-50deg, #8f5bfe, #864eff, #e68a08);
+}
+.card{
+    background: #f3e9f1;
+}
+
+#logo{
+    color: #e68a08;
+}
+#panier{
+    color: #e68a08;
+}
+#product{
+    border-radius: 15px;
+}
+.img{
+    border-radius: 5px;
 }

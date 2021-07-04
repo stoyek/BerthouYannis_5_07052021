@@ -23,12 +23,12 @@
   <body>
     <div class="container-fluid bg-dark">
       <header class="container site-header sticky-top py-1">
-        <nav class="d-flex flex-row justify-content-between navbar-dark">
-          <a class="py-2 navbar-brand nav-items" href="#" aria-label="Product">
+        <nav class="d-flex flex-row justify-content-between navbar-dark align-self-center">
+          <a id="logo" class="py-2 navbar-brand nav-items" href="#" aria-label="Product">
             <img src="" alt="" />
             Orinoco
           </a>
-          <a class="py-2 unstyled nav-items" href="panier.html">
+          <a id="panier" class="py-2 unstyled nav-items" href="panier.html">
             <i class="fas fa-shopping-cart"></i>
             Panier
           </a>
@@ -47,7 +47,7 @@
               <h5 id="title" class="title col-6 card-title">Title Card</h5>
               <p id="price" class="price col-6 text-end card-text">Price</p>
               <p id="description" class="description card-text">descritpion</p>
-              <a id="btn" class="col-6 btnProductPage btn btn-primary" href="./productPage.html">
+              <a id="btn" class="col-6 btnProductPage btn btn-primary btn-custom" href="./productPage.html">
                 + Plus d'info
               </a>
             </div>
@@ -67,6 +67,7 @@
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
+    <script src="java/ajax.js"></script>
     <script src="java/index.js"></script>
   </body>
 </html>

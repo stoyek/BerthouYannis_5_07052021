@@ -7,15 +7,6 @@ async function main() {
   
 }
 
-function getProduct() {
-  return fetch("http://localhost:3000/api/cameras")
-  .then((res) => res.json())
-  .then((data) => {
-    console.log("getProduct :", data)
-    return data
-  })
-}
-
 function displayProduct(data) {
   for(i = 0; i < data.length; i++){
 

@@ -43,58 +43,57 @@
     <main class="container d-flex flex-column">
       <template id="template" class="mt-5 d-flex flex-column productPanier">
         <div id="toRemove" class="mb-4 row">
-          <div class="col-10 row">
+          <div class="col-9 row">
             <img
               id="img"
               src=""
               alt=""
-              class="border-start border-end img col-2"
+              class="border-start border-end img col-sm-4 col-6 "
             />
-            <div id="title" class="border-end col-4 name">Name</div>
-            <div id="lense" class="border-end col-4 lense">Lense</div>
-            <div id="price" class="col-2 price">Price</div>
+            <div id="title" class="border-end col-sm-4 col-6 name">Name</div>
+            <div id="lense" class="border-end col-sm-4 col-6 lense">Lense</div>
           </div>
-          <div class="col-1 row align-self-baseline">
+          <div class="col-4 row align-self-baseline">
             <button
-              id="remove"
-              class="
-                remove
-                btn-setItem
-                align-self-center
-                btn btn-secondary
-                col-3
-                p-1
-              "
+            id="remove"
+            class="
+            remove
+            btn-setItem
+            align-self-center
+            btn btn-secondary
+            col-3
+            p-1
+            "
             >
-              -
+            -
             </button>
             <div id="inCart" class="align-self-center col-6">10</div>
             <button
               id="more"
               class="
-                more
-                btn-setItem
-                align-self-center
-                btn btn-secondary
-                col-3
-                p-1
+              more
+              btn-setItem
+              align-self-center
+              btn btn-secondary
+              col-3
+              p-1
               "
-            >
+              >
               +
             </button>
+            <div id="price" class="align-self-center price">Price</div>
           </div>
-          <div id="totale-item" class="col-1">30 00€</div>
         </div>
       </template>
-
-      <!-- Produit dans le panier -->
+  
+  <!-- Produit dans le panier -->
       <div id="productContainer" class=""></div>
       <!-- Total Panier -->
       <div id="totalCounter" class="">
         <div class="mb-2 row">
           <div class="col-10 row">
-            <div class="col-10 border-end text-end">Totale des articles</div>
-            <div id="total" class="col-2"></div>
+            <div class="col-6 border-end">Totale des articles</div>
+            <div id="total" class="col-6"></div>
           </div>
         </div>
       </div>
@@ -112,48 +111,56 @@
       >
         <form
           id="userDataForm"
-          class="formulaire row col-10 p-2"
-          action=""
-          method="POST"
+          class="formulaire row col-12 col-lg-10 p-2"
         >
-          <div class="mb-3 col-6">
+          <div class="mb-3 col-lg-5 col-12">
             <label for="firstName" class="form-label">Prénom</label>
-            <input type="text" class="form-control" name="firstName" required />
+            <input type="text" class="form-control" name="firstName" id="name" required />
             <small></small>
           </div>
-          <div class="mb-3 col-6">
+          <div class="mb-3 col-lg-2 col-0"></div>
+          <div class="mb-3 col-lg-5 col-12">
             <label for="lastName" class="form-label">Nom</label>
             <input type="text" class="form-control" name="lastName" required />
             <small></small>
           </div>
-          <div class="mb-3 col-8">
+          <div class="mb-3 col-12">
             <label for="address" class="form-label">Adresse</label>
             <input type="text" class="form-control" name="address" required />
             <small></small>
           </div>
-          <div class="mb-3 col-4">
+          <div class="mb-3 col-lg-7 col-12">
             <label for="city" class="form-label">Ville</label>
             <input type="text" class="form-control" name="city" required />
             <small></small>
           </div>
-          <div class="mb-3 col-7">
+          <div class="col-lg-2 col-0"></div>
+          <div class="mb-3 col-lg-3 col-12">
+            <label for="postalCode" class="form-label">Code postale</label>
+            <input type="text" class="form-control" name="postalCode" required />
+            <small></small>
+          </div>
+          <div class="mb-3 col-12">
             <label for="email" class="form-label">E-mail</label>
             <input type="email" class="form-control" name="email" required />
             <small></small>
+          </div>
+          <div class="mb-3">
+            <button id="btn-submit" type="submit" class="btn btn-secondary col-12 col-lg-3">Commander</button>
           </div>
         </form>
       </div>
 
       <!-- Boutton Commande -->
       <div class="container p-0 row">
-        <div class="col-7"></div>
         <a
-          href="#btn-commandItem"
-          id="btn-commandItem"
-          class="mb-5 col-5 btn btn-secondary align-end"
+        href="#btn-submit"
+        id="btn-displayForm"
+        class="mb-5 col-5 btn btn-secondary align-end"
         >
-          Commander
-        </a>
+        Commander
+      </a>
+      <div class="col-7"></div>
       </div>
     </main>
 
@@ -168,6 +175,7 @@
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
+    <script src="./java/ajax.js"></script>
     <script src="./java/panier.js"></script>
   </body>
 </html>
