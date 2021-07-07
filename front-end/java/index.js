@@ -4,7 +4,6 @@ async function main() {
   const data = await getProduct();
   getProduct();
   displayProduct(data);
-  
 }
 
 function displayProduct(data) {
@@ -18,7 +17,7 @@ function displayProduct(data) {
       clone.getElementById("title").textContent = data[i].name
       clone.getElementById("description").textContent = data[i].description
       clone.getElementById("price").textContent = data[i].price /100 + ' €'
-      clone.getElementById("btn").href = 'productPage.html?' + data[i]._id;
+      clone.getElementById("btn").href = 'product_page.html?' + data[i]._id;
 
     document.getElementById("cardsContainer").appendChild(clone)
 

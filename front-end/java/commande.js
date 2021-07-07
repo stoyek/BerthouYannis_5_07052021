@@ -5,6 +5,8 @@ function displayCommandNumber(){
     .getElementById('numberCommande')
     .innerText = localStorage.getItem('orderID')
 
-    localStorage.removeItem('Panier')
-    localStorage.removeItem('orderID')
+    if(localStorage.getItem('orderID') != null){
+        localStorage.removeItem('Panier')
+        localStorage.removeItem('orderID')
+    }
 }

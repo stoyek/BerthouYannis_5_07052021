@@ -48,45 +48,45 @@
               id="img"
               src=""
               alt=""
-              class="border-start border-end img col-sm-4 col-6 "
+              class="border-start border-end img col-sm-4 col-6"
             />
             <div id="title" class="border-end col-sm-4 col-6 name">Name</div>
             <div id="lense" class="border-end col-sm-4 col-6 lense">Lense</div>
           </div>
           <div class="col-4 row align-self-baseline">
             <button
-            id="remove"
-            class="
-            remove
-            btn-setItem
-            align-self-center
-            btn btn-secondary
-            col-3
-            p-1
-            "
+              id="remove"
+              class="
+                remove
+                btn-setItem
+                align-self-center
+                btn btn-secondary
+                col-3
+                p-1
+              "
             >
-            -
+              -
             </button>
             <div id="inCart" class="align-self-center col-6">10</div>
             <button
               id="more"
               class="
-              more
-              btn-setItem
-              align-self-center
-              btn btn-secondary
-              col-3
-              p-1
+                more
+                btn-setItem
+                align-self-center
+                btn btn-secondary
+                col-3
+                p-1
               "
-              >
+            >
               +
             </button>
             <div id="price" class="align-self-center price">Price</div>
           </div>
         </div>
       </template>
-  
-  <!-- Produit dans le panier -->
+
+      <!-- Produit dans le panier -->
       <div id="productContainer" class=""></div>
       <!-- Total Panier -->
       <div id="totalCounter" class="">
@@ -109,13 +109,16 @@
           border-top border-bottom
         "
       >
-        <form
-          id="userDataForm"
-          class="formulaire row col-12 col-lg-10 p-2"
-        >
+        <form id="userDataForm" class="formulaire row col-12 col-lg-10 p-2">
           <div class="mb-3 col-lg-5 col-12">
             <label for="firstName" class="form-label">Prénom</label>
-            <input type="text" class="form-control" name="firstName" id="name" required />
+            <input
+              type="text"
+              class="form-control"
+              name="firstName"
+              id="name"
+              required
+            />
             <small></small>
           </div>
           <div class="mb-3 col-lg-2 col-0"></div>
@@ -137,7 +140,12 @@
           <div class="col-lg-2 col-0"></div>
           <div class="mb-3 col-lg-3 col-12">
             <label for="postalCode" class="form-label">Code postale</label>
-            <input type="text" class="form-control" name="postalCode" required />
+            <input
+              type="text"
+              class="form-control"
+              name="postalCode"
+              required
+            />
             <small></small>
           </div>
           <div class="mb-3 col-12">
@@ -146,7 +154,13 @@
             <small></small>
           </div>
           <div class="mb-3">
-            <button id="btn-submit" type="submit" class="btn btn-secondary col-12 col-lg-3">Commander</button>
+            <button
+              id="btn-submit"
+              type="submit"
+              class="btn btn-secondary col-12 col-lg-3"
+            >
+              Commander
+            </button>
           </div>
         </form>
       </div>
@@ -154,13 +168,13 @@
       <!-- Boutton Commande -->
       <div class="container p-0 row">
         <a
-        href="#btn-submit"
-        id="btn-displayForm"
-        class="mb-5 col-5 btn btn-secondary align-end"
+          href="#btn-submit"
+          id="btn-displayForm"
+          class="mb-5 col-5 btn btn-secondary align-end"
         >
-        Commander
-      </a>
-      <div class="col-7"></div>
+          Commander
+        </a>
+        <div class="col-7"></div>
       </div>
     </main>
 
@@ -176,6 +190,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./java/ajax.js"></script>
+    <script src="./java/form_valid.js"></script>
     <script src="./java/panier.js"></script>
   </body>
 </html>

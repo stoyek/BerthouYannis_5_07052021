@@ -1,18 +1,20 @@
 // --------- Méthode POST
 
 function postAjax(data){
-  return fetch('http://localhost:3000/api/cameras/order', {
+  fetch('http://localhost:3000/api/cameras/order', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: data
+    body: JSON.stringify(data)
   })
   .then((res) => res.text())
   .then((data) => JSON.parse(data))
-  .then((order) => localStorage.setItem('orderID', order.orderId))
+  .then((order) => {
+    localStorage.setItem('orderID', order.orderId)
+    displayCommand();
+  })
   .catch(e => console.error('error', e))
-  
 }
 
 // --------- Méthode GET

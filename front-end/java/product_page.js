@@ -3,10 +3,9 @@ main()
 async function main() {
   const urlOfProductChoose =  'http://localhost:3000/api/cameras/'
     + window.location.search.replace('?', '');
-
   // 1_ Get product choose by user on server
   const product = ajaxGet(urlOfProductChoose)
-  console.log(product);
+  console.log(product)
 
   product
     .then((product) => {
