@@ -2,10 +2,14 @@ main();
 
 function main() {
   let itemOfPanier = JSON.parse(localStorage.getItem("Panier"));
-
-  displayProduct(itemOfPanier);
-  btnToChangePrice(itemOfPanier);
-  commande();
+  if (localStorage.getItem("Panier")){
+    displayProduct(itemOfPanier);
+    btnToChangePrice(itemOfPanier);
+    commande();
+  }
+  else{
+    alert("panier vide")
+  }
 }
 
 function displayProduct(data) {
