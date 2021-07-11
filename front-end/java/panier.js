@@ -2,13 +2,16 @@ main();
 
 function main() {
   let itemOfPanier = JSON.parse(localStorage.getItem("Panier"));
-  if (localStorage.getItem("Panier")){
+  if (localStorage.getItem("Panier") != null) {
+    document.querySelector('#mainProduct').style.display = 'block'
+    document.querySelector('#emptyShopCart').style.display = 'none'
     displayProduct(itemOfPanier);
     btnToChangePrice(itemOfPanier);
     commande();
-  }
-  else{
-    alert("panier vide")
+  } else {
+    document.querySelector('#mainProduct').style.display = 'none'
+    document.querySelector('#emptyShopCart').style.display = 'block'
+    // console.log(document.querySelector('main'));
   }
 }
 
@@ -20,7 +23,8 @@ function displayProduct(data) {
     clone.getElementById("img").src = data[i].imageUrl;
     clone.getElementById("title").textContent = data[i].name;
     clone.getElementById("lense").textContent = data[i].lense;
-    clone.getElementById("price").textContent = data[i].price + " €";
+    clone.getElementById("price").textContent =
+      data[i].price * data[i].inCart + " €";
     clone.getElementById("inCart").textContent = data[i].inCart;
 
     document.getElementById("productContainer").appendChild(clone);
@@ -45,21 +49,34 @@ function btnToChangePrice(inCart) {
     e.onclick = () => {
       let element = document.getElementById("productContainer");
 
-      if (e.classList[0] === "more") {
+      if (e.classList[0] === "suppr") {
+        const lense = e.parentNode.parentNode.querySelector("#lense");
+        const name = e.parentNode.parentNode.querySelector("#title");
+        console.log(name, lense, inCart);
+        for (i = 0; i < inCart.length; i++) {
+          if (
+            lense.textContent === inCart[i].lense &&
+            name.textContent === inCart[i].name
+          ) {
+            inCart.splice(i, 1);
+          }
+        }
+      } else if (e.classList[0] === "more") {
         inCart[e.id].inCart++;
       } else {
         if (inCart[e.id].inCart > 1) {
           inCart[e.id].inCart--;
-        } else {
-          e.style.display = null;
         }
       }
       localStorage.setItem("Panier", JSON.stringify(inCart));
       while (element.firstChild) {
         element.removeChild(element.firstChild);
       }
-      displayProduct(inCart);
-      btnToChangePrice(inCart);
+      if (inCart.length === 0) {
+        localStorage.removeItem("Panier");
+        console.log(localStorage.getItem("Panier"));
+      }
+      main();
     };
   });
 }
@@ -75,5 +92,3 @@ function commande() {
     formValidate();
   });
 }
-
-

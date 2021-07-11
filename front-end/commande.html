@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Orinoco</title>
+    <title>Orinoco | Commande</title>
     <meta name="descritpion" />
   </head>
 
@@ -24,11 +24,15 @@
     <div class="container-fluid bg-dark">
       <header class="container site-header sticky-top py-1">
         <nav class="d-flex flex-row justify-content-between navbar-dark">
-          <a class="py-2 navbar-brand nav-items" href="./index.html" aria-label="Product">
+          <a
+            class="py-2 navbar-brand nav-items"
+            href="./index.html"
+            id="logo"
+          >
             <img src="" alt="" />
             Orinoco
           </a>
-          <a class="py-2 unstyled nav-items" href="./panier.html">
+          <a id="panier" class="py-2 unstyled nav-items" href="./panier.html">
             <i class="fas fa-shopping-cart"></i>
             Panier
           </a>
@@ -36,19 +40,39 @@
       </header>
     </div>
 
-      <main class="container col-8">
-        <div class="align-self-center text-center">
-            <h1>Votre commande à bien été validée</h1>
-            <h2>Merci pour votre commande n°</h2>
-            <h3 id="numberCommande"></h3>
-        </div>
-      </main>
+    <main class="container col-8">
+      <div class="align-self-center text-center">
+        <h1>Votre commande à bien été validée</h1>
+        <h2>Merci pour votre commande n°</h2>
+        <h3 id="numberCommande"></h3>
+      </div>
+    </main>
 
-      <footer class="footer fixed-bottom mt-auto py-3 bg-dark">
-        <div class="container">
-          <span class="text-muted">Conditions générales</span>
+    <!-- Footer-start -->
+
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <a
+              href="https://fr.wikipedia.org/wiki/Conditions_g%C3%A9n%C3%A9rales_de_vente#"
+            >
+              <span class="text-muted">Conditions générales de vente</span>
+            </a>
+          </div>
+          <div class="col text-end">
+            <a href="https://fr-fr.facebook.com/"
+              ><i class="m-1 fab fa-facebook-f"></i>Facebook</a
+            >
+            <a class="ms-3" href="https://twitter.com/"
+              ><i class="m-1 fab fa-twitter"></i>Twitter</a
+            >
+          </div>
         </div>
-      </footer>
+      </div>
+    </footer>
+
+    <!-- Footer-end -->
 
     <script src="./java/commande.js"></script>
   </body>

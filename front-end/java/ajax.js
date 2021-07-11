@@ -26,5 +26,5 @@ function getProduct() {
     console.log("getProduct :", data)
     return data
   })
-  .catch(e => console.console.error('error', e))
+  .catch(e => console.error('error', e))
 }

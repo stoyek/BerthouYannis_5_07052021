@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
 
-    <title>Orinoco</title>
+    <title>Orinoco | Accueil</title>
     <meta name="descritpion" />
   </head>
 
@@ -34,12 +34,7 @@
             align-self-center
           "
         >
-          <a
-            id="logo"
-            class="py-2 navbar-brand nav-items"
-            href="#"
-            aria-label="Product"
-          >
+          <a id="logo" class="py-2 navbar-brand nav-items" href="#">
             <img src="" alt="" />
             Orinoco
           </a>
@@ -57,24 +52,38 @@
 
     <main class="container">
       <div class="hero"></div>
-      <div id="cardsContainer" class="row">
+      <div id="cardsContainer" class="row d-flex justify-content-between">
+        <!-- Template-Start -->
         <template id="template">
-          <div class="card col-md-5 m-md-5">
-            <img id="img" class="img card-img-top" src="" alt="Photo Produit" />
-            <div class="card-body">
-              <h5 id="title" class="title col-6 card-title">Title Card</h5>
-              <p id="price" class="price col-6 text-end card-text">Price</p>
-              <p id="description" class="description card-text">descritpion</p>
-              <a
-                id="btn"
-                class="col-6 btnProductPage btn btn-primary btn-custom"
-                href="./product_page.html"
-              >
-                + Plus d'info
-              </a>
+          <div class="card col-md-6 pt-3 mt-3 mb-3">
+            <div id="card-custom">
+              <img
+                id="img"
+                class="img card-img-top border-bottom"
+                src=""
+                alt="Photo Produit"
+              />
+              <div class="card-body row">
+                <h2 id="title" class="title col card-title h5">Title Card</h2>
+                <p id="price" class="price col text-end card-text">Price</p>
+                <p id="description" class="description card-text">
+                  descritpion
+                </p>
+                <span class="col-6"></span>
+                <div class="col-6">
+                  <a
+                    id="btn"
+                    class="col-12 btnProductPage btn btn-primary btn-custom"
+                    href="./product_page.html"
+                  >
+                    + Plus d'info
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </template>
+        <!-- Template-end -->
       </div>
     </main>
 
@@ -82,9 +91,27 @@
 
     <!-- Footer-start -->
 
-    <footer class="footer fixed-bottom mt-auto py-3 bg-dark">
+    <footer class="footer mt-auto py-3 bg-dark">
       <div class="container">
-        <span class="text-muted">Conditions générales</span>
+        <div class="row">
+          <div class="col">
+            <a
+              href="https://fr.wikipedia.org/wiki/Conditions_g%C3%A9n%C3%A9rales_de_vente#"
+            >
+              <span class="text-muted">Conditions générales de vente</span>
+            </a>
+          </div>
+          <div class="col text-end">
+            <a class="col-6" href="https://fr-fr.facebook.com/">
+              <i class="m-1 fab fa-facebook-f"></i>
+              Facebook
+            </a>
+            <a class="col-6 ms-3" href="https://twitter.com/">
+              <i class="m-1 fab fa-twitter"></i>
+              Twitter
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
 

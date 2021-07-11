@@ -1,9 +1,31 @@
 a{
     text-decoration: none;
 }
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+main{
+    margin-bottom: 80px;
+}
 #main{
     filter: none;
 }
+
+#mainProduct{
+    display: none;
+}
+
+#emptyShopCart{
+    display: block;
+}
+#emptyCart{
+    border-radius: 50px;
+    background: #f3e9f1;
+    border: 1px solid #ce7b0755;
+}
+
 #popUpBg{
     display: none;
     position: absolute;
@@ -43,6 +65,7 @@ a{
     animation: slide .7s;
 }
 
+/* Animation du formulaire */
 @keyframes slide {
     from{
         transform: translateY(-250px);
@@ -60,15 +83,28 @@ small{
 }
 
 .btn-custom{
-    background: linear-gradient(-10deg, #8f5bfe, #8f5bfe, #9171cf, #e68a08);
+    background: linear-gradient(-50deg, #8f5bfe, #8f5bfe, #9171cf, #e68a08c0);
     transition: .3s;
+    border: none;
+    box-shadow: 1px 2px 5px #bebabd;
+
 }
-.btn-cutom:hover{
+.btn-custom:hover{
+    box-shadow: 2px 2px 5px rgb(109, 109, 109);
     color: black;
-    background: linear-gradient(-50deg, #8f5bfe, #864eff, #e68a08);
+    background: linear-gradient(-90deg, #8f5bfe94, #e68a08, #ce7b07);
 }
 .card{
+    border: none;
+}
+.product-main{
+    border-left: 1px solid #e68a0850;
+    border-right: 1px solid #8f5bfe50;
+
+}
+#card-custom{
     background: #f3e9f1;
+    border-bottom: 1px solid #c0b2df;
 }
 
 #logo{
@@ -80,6 +116,6 @@ small{
 #product{
     border-radius: 15px;
 }
-.img{
-    border-radius: 5px;
+#img{
+    border-radius: none;
 }

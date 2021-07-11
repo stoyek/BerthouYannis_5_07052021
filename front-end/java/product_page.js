@@ -46,16 +46,14 @@ function displayProduct(product) {
   mainHTML.insertAdjacentHTML(
     "afterbegin",
     `
-        <div id="product" class="border-top border-bottom align-self-center d-flex flex-row ">
-        <img id="img" class="col-6" src="${product.imageUrl} " alt="" />
+        <div id="product" class="align-self-center d-flex flex-row flex-wrap ">
+        <img id="img" class="col-12 col-lg-6" src="${product.imageUrl} " alt="" />
         <div class="col-1"></div>
-        <div class="border-start col-5 row ">
-            <div class="col-9">
+        <div class="lg-border-start col-md-10 col-lg-5 row ">
                 <h2 class="">${product.name}</h2>
                 <div class="">${product.description}</div>
-            </div>
-            <div id="price" class="col-3">
-                <div class="text-end" id="price">${product.price /100} €</div>
+            <div id="price" class="col">
+                <div class="" id="price">${product.price /100} €</div>
             </div>
             <div class="col-12"></div>
             <div class="col-5">

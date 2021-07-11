@@ -14,9 +14,9 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
 
-    <title>Orinoco</title>
+    <title>Orinoco | Panier</title>
     <meta name="descritpion" />
   </head>
 
@@ -24,15 +24,11 @@
     <div class="container-fluid bg-dark">
       <header class="container site-header sticky-top py-1">
         <nav class="d-flex flex-row justify-content-between navbar-dark">
-          <a
-            class="py-2 navbar-brand nav-items"
-            href="index.html"
-            aria-label="Product"
-          >
+          <a class="py-2 navbar-brand nav-items" href="./index.html" id="logo">
             <img src="" alt="" />
             Orinoco
           </a>
-          <a class="py-2 unstyled nav-items" href="">
+          <a id="panier" class="py-2 unstyled nav-items" href="./panier.html">
             <i class="fas fa-shopping-cart"></i>
             Panier
           </a>
@@ -43,7 +39,7 @@
     <main class="container d-flex flex-column">
       <template id="template" class="mt-5 d-flex flex-column productPanier">
         <div id="toRemove" class="mb-4 row">
-          <div class="col-9 row">
+          <div class="col-lg-8 row">
             <img
               id="img"
               src=""
@@ -51,9 +47,9 @@
               class="border-start border-end img col-sm-4 col-6"
             />
             <div id="title" class="border-end col-sm-4 col-6 name">Name</div>
-            <div id="lense" class="border-end col-sm-4 col-6 lense">Lense</div>
+            <div id="lense" class="col-sm-4 col-6 lense">Lense</div>
           </div>
-          <div class="col-4 row align-self-baseline">
+          <div class="col-lg-2 row align-self-baseline justify-content-between">
             <button
               id="remove"
               class="
@@ -67,7 +63,7 @@
             >
               -
             </button>
-            <div id="inCart" class="align-self-center col-6">10</div>
+            <div id="inCart" class="align-self-center col-3">1</div>
             <button
               id="more"
               class="
@@ -81,108 +77,149 @@
             >
               +
             </button>
-            <div id="price" class="align-self-center price">Price</div>
+            <button class="suppr btn btn-danger btn-setItem col-3">
+              <i class="far fa-trash-alt"></i>
+            </button>
           </div>
+          <div id="price" class="col-lg-2 price">Price</div>
         </div>
       </template>
 
       <!-- Produit dans le panier -->
-      <div id="productContainer" class=""></div>
-      <!-- Total Panier -->
-      <div id="totalCounter" class="">
-        <div class="mb-2 row">
-          <div class="col-10 row">
-            <div class="col-6 border-end">Totale des articles</div>
-            <div id="total" class="col-6"></div>
+
+      <div id="mainProduct">
+        <div id="productContainer" class=""></div>
+        <!-- Total Panier -->
+        <div id="totalCounter" class="">
+          <div class="mb-2 col-8 row">
+            <div class="col-4 border-end">Totale des articles</div>
+            <div id="total" class="col"></div>
           </div>
         </div>
-      </div>
-
-      <!-- Formulaire -->
-      <div
-        id="formulaireContainer"
-        class="
-          formulaire-container
-          container
-          mt-5
-          mb-3
-          border-top border-bottom
-        "
-      >
-        <form id="userDataForm" class="formulaire row col-12 col-lg-10 p-2">
-          <div class="mb-3 col-lg-5 col-12">
-            <label for="firstName" class="form-label">Prénom</label>
-            <input
-              type="text"
-              class="form-control"
-              name="firstName"
-              id="name"
-              required
-            />
-            <small></small>
-          </div>
-          <div class="mb-3 col-lg-2 col-0"></div>
-          <div class="mb-3 col-lg-5 col-12">
-            <label for="lastName" class="form-label">Nom</label>
-            <input type="text" class="form-control" name="lastName" required />
-            <small></small>
-          </div>
-          <div class="mb-3 col-12">
-            <label for="address" class="form-label">Adresse</label>
-            <input type="text" class="form-control" name="address" required />
-            <small></small>
-          </div>
-          <div class="mb-3 col-lg-7 col-12">
-            <label for="city" class="form-label">Ville</label>
-            <input type="text" class="form-control" name="city" required />
-            <small></small>
-          </div>
-          <div class="col-lg-2 col-0"></div>
-          <div class="mb-3 col-lg-3 col-12">
-            <label for="postalCode" class="form-label">Code postale</label>
-            <input
-              type="text"
-              class="form-control"
-              name="postalCode"
-              required
-            />
-            <small></small>
-          </div>
-          <div class="mb-3 col-12">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" name="email" required />
-            <small></small>
-          </div>
-          <div class="mb-3">
-            <button
-              id="btn-submit"
-              type="submit"
-              class="btn btn-secondary col-12 col-lg-3"
-            >
-              Commander
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <!-- Boutton Commande -->
-      <div class="container p-0 row">
-        <a
-          href="#btn-submit"
-          id="btn-displayForm"
-          class="mb-5 col-5 btn btn-secondary align-end"
+        <!-- Formulaire -->
+        <div
+          id="formulaireContainer"
+          class="
+            formulaire-container
+            container
+            mt-5
+            mb-3
+            border-top border-bottom
+          "
         >
-          Commander
-        </a>
-        <div class="col-7"></div>
+          <form
+            id="userDataForm"
+            class="formulaire row col-12 col-lg-10 p-2 mb-5"
+          >
+            <div class="mb-3 col-lg-5 col-12">
+              <label for="firstName" class="form-label">Prénom</label>
+              <input
+                type="text"
+                class="form-control"
+                name="firstName"
+                id="name"
+                required
+              />
+              <small></small>
+            </div>
+            <div class="mb-3 col-lg-2 col-0"></div>
+            <div class="mb-3 col-lg-5 col-12">
+              <label for="lastName" class="form-label">Nom</label>
+              <input
+                type="text"
+                class="form-control"
+                name="lastName"
+                required
+              />
+              <small></small>
+            </div>
+            <div class="mb-3 col-12">
+              <label for="address" class="form-label">Adresse</label>
+              <input type="text" class="form-control" name="address" required />
+              <small></small>
+            </div>
+            <div class="mb-3 col-lg-7 col-12">
+              <label for="city" class="form-label">Ville</label>
+              <input type="text" class="form-control" name="city" required />
+              <small></small>
+            </div>
+            <div class="col-lg-2 col-0"></div>
+            <div class="mb-3 col-lg-3 col-12">
+              <label for="postalCode" class="form-label">Code postale</label>
+              <input
+                type="text"
+                class="form-control"
+                name="postalCode"
+                required
+              />
+              <small></small>
+            </div>
+            <div class="mb-3 col-12">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" name="email" required />
+              <small></small>
+            </div>
+            <div class="mb-3">
+              <button
+                id="btn-submit"
+                type="submit"
+                class="btn btn-secondary col-12 col-lg-3"
+              >
+                Commander
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Boutton Commande -->
+        <div class="container p-0 row">
+          <a
+            href="#btn-submit"
+            id="btn-displayForm"
+            class="mb-5 col-5 btn btn-secondary align-end"
+          >
+            Commander
+          </a>
+          <div class="col-7"></div>
+        </div>
       </div>
     </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
+    <div id="emptyShopCart" class="container">
+      <div class="row">
+        <div id="emptyCart" class="col-md-10 row m-auto">
+          <h1  class=" col-10 h4 mt-2 mb-2 p-3">Votre panier est vide</h1>
+          <a id="" href="./index.html" class="col h4 mt-2 mb-2 p-3">Accueil</a>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer-start -->
+
+    <footer class="footer py-3 bg-dark">
       <div class="container">
-        <span class="text-muted">Conditions générales</span>
+        <div class="row">
+          <div class="col">
+            <a
+              href="https://fr.wikipedia.org/wiki/Conditions_g%C3%A9n%C3%A9rales_de_vente#"
+            >
+              <span class="text-muted">Conditions générales de vente</span>
+            </a>
+          </div>
+          <div class="col text-end">
+            <a href="https://fr-fr.facebook.com/"
+              ><i class="m-1 fab fa-facebook-f"></i>Facebook</a
+            >
+            <a class="ms-3" href="https://twitter.com/"
+              ><i class="m-1 fab fa-twitter"></i>Twitter</a
+            >
+          </div>
+        </div>
       </div>
     </footer>
+
+    <!-- Footer-end -->
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
