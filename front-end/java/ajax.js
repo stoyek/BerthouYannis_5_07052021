@@ -28,3 +28,15 @@ function getProduct() {
   })
   .catch(e => console.error('error', e))
 }
+
+// --------- Méthode GET + ID
+
+function getProductById(url) {
+  return fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("getProduct :", data)
+    return data
+  })
+  .catch(e => console.error('error', e))
+}

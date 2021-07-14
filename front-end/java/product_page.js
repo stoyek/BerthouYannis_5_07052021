@@ -4,7 +4,7 @@ async function main() {
   const urlOfProductChoose =  'http://localhost:3000/api/cameras/'
     + window.location.search.replace('?', '');
   // 1_ Get product choose by user on server
-  const product = ajaxGet(urlOfProductChoose)
+  const product = getProductById(urlOfProductChoose)
   console.log(product)
 
   product
@@ -13,30 +13,6 @@ async function main() {
       addToShop(product); 
     })
 
-}
-
-// 1_ Get product choose by user on server
-function ajaxGet(url) {
-  
-  const promise = new Promise(function (resolve, reject) {
-    
-    const xhr = new XMLHttpRequest();
-
-    xhr.open('GET', url, true);
-    xhr.onreadystatechange = function () {
-      if(xhr.readyState === 4 && xhr.status === 200){
-        resolve(JSON.parse(xhr.responseText))
-        console.log('readyState: ', xhr.readyState);
-        console.log('status: ', xhr.status);
-      }
-      else{
-        console.log('readyState: ', xhr.readyState);
-        console.log('status: ', xhr.status);
-      }
-    }
-    xhr.send();
-  });
-  return promise;
 }
 
 // 2_ Display the product choosed
