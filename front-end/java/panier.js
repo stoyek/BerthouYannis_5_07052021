@@ -5,6 +5,7 @@ function main() {
   if (localStorage.getItem("Panier") != null) {
     document.querySelector('#mainProduct').style.display = 'block'
     document.querySelector('#emptyShopCart').style.display = 'none'
+    // Affichage des éléments du panier
     displayProduct(itemOfPanier);
     btnToChangePrice(itemOfPanier);
     commande();

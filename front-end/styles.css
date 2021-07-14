@@ -117,5 +117,5 @@ small{
     border-radius: 15px;
 }
 #img{
-    border-radius: none;
+    border-radius: 0px;
 }

@@ -1,6 +1,6 @@
 main()
 
-async function main() {
+function main() {
   const urlOfProductChoose =  'http://localhost:3000/api/cameras/'
     + window.location.search.replace('?', '');
   // 1_ Get product choose by user on server
