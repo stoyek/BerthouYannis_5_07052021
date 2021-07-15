@@ -1,0 +1,10 @@
+@media screen and (max-width: 991px) {
+    #img{
+        display: none;
+    }
+    .line{
+        display: block;
+        border-bottom: 2px solid #e68a085e;
+        margin: 25px;
+    }
+}

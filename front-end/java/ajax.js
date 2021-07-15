@@ -14,7 +14,10 @@ function postAjax(data){
     localStorage.setItem('orderID', order.orderId)
     displayCommand();
   })
-  .catch(e => console.error('error', e))
+  .catch((e) => {
+    alert('erreur: Aucune réponse du server', e)
+    console.log('error: ', e);
+  })
 }
 
 // --------- Méthode GET
@@ -26,7 +29,10 @@ function getProduct() {
     console.log("getProduct :", data)
     return data
   })
-  .catch(e => console.error('error', e))
+  .catch((e) => {
+    alert('erreur: Aucune réponse du server', e)
+    console.log('error: ', e);
+  })
 }
 
 // --------- Méthode GET + ID
@@ -38,5 +44,8 @@ function getProductById(url) {
     console.log("getProduct :", data)
     return data
   })
-  .catch(e => console.error('error', e))
+  .catch((e) => {
+    alert('erreur: Aucune réponse du server', e)
+    console.log('error: ', e);
+  })
 }

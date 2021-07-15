@@ -1,3 +1,4 @@
+
 function formValidate() {
   const form = document.querySelector("#userDataForm");
 
@@ -11,6 +12,7 @@ function formValidate() {
   form.firstName.addEventListener("input", () => {
     firstNameVerif = validate(form.firstName);
   });
+
   form.lastName.addEventListener("input", () => {
     lastNameVerif = validate(form.lastName);
   });
@@ -65,25 +67,24 @@ function formValidate() {
       console.log("yepii");
     } else {
       console.error(
-        "error",
-        firstNameVerif,
-        lastNameVerif,
-        adressVerif,
-        cityVerif,
-        postalCodeVerif,
-        emailVerif
+        "error \n",
+        "FirstName: ", firstNameVerif, " :\n",
+        "LastName: ", lastNameVerif, " :\n", 
+        "Adress: ", adressVerif, " :\n", 
+        "City: ", cityVerif, " :\n", 
+        "PostalCode: ", postalCodeVerif, " :\n", 
+        "E-mail: ", emailVerif, " :"
       );
-      alert("Veuiller vérifier le formulaire avant envoie");
+      alert("Veuiller vérifier les données saisie");
     }
   })
 }
 
 function displayCommand() {
   if (localStorage.getItem("orderID") != null) {
-    console.log("yep");
     window.location.href = "./commande.html";
   } else {
-    console.log("none");
+    console.log("Aucun Id dans le localStorage");
   }
 }
 
