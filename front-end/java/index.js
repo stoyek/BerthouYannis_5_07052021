@@ -2,7 +2,6 @@ main()
 
 async function main() {
   const data = await getProduct();
-  getProduct();
   displayProduct(data);
 }
 
@@ -11,7 +10,6 @@ function displayProduct(data) {
 
     const template = document.getElementById('template');
     const clone = document.importNode(template.content, true)
-    console.log(clone);
 
       clone.getElementById("img").src = data[i].imageUrl
       clone.getElementById("title").textContent = data[i].name
@@ -20,7 +18,6 @@ function displayProduct(data) {
       clone.getElementById("btn").href = 'product_page.html?' + data[i]._id;
 
     document.getElementById("cardsContainer").appendChild(clone)
-
   }
 }
 

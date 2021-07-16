@@ -26,9 +26,8 @@ function getProduct() {
   return fetch("http://localhost:3000/api/cameras")
   .then((res) => res.json())
   .then((data) => {
-    console.log("getProduct :", data)
-    return data
-  })
+    console.log(data);
+    return data})
   .catch((e) => {
     alert('erreur: Aucune réponse du server', e)
     console.log('error: ', e);
@@ -40,10 +39,7 @@ function getProduct() {
 function getProductById(url) {
   return fetch(url)
   .then((res) => res.json())
-  .then((data) => {
-    console.log("getProduct :", data)
-    return data
-  })
+  .then((data) => {return data})
   .catch((e) => {
     alert('erreur: Aucune réponse du server', e)
     console.log('error: ', e);

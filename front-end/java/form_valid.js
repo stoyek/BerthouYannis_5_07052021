@@ -99,8 +99,8 @@ function validate(input) {
 
   const errorSmall = document.querySelectorAll("small");
 
-  switch (input.name) {
-    case "firstName": //Test Prénom
+  switch (input.name) {                     //-------- Soutenance - Facoriser le code en créant une fonction
+    case "firstName": //Test Prénom         //-------- qui réduit le code entre chaque case du switch.
       if (onlyLeterReg.test(input.value)) {
         errorSmall[0].innerText = "";
         return 1;
